@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>LSDFI产品设计报告 | Jeffrey.eth</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://0xjeffrey.life/favicon.ico?v=1682591353839">
+<link rel="stylesheet" href="http://0xjeffrey.life/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="大纲
+1.0需求分析
+
+1.1 新型LSDFI切入点
+
+2.0LSD1.0设计机制
+
+2.1Lido设计机制
+2.2Rocketpool设计机制
+2.3Coinbase 设计机制
+
+3.0LSDFi2.0设计机制
+
+3.1 Frax Eth..." />
+    <meta name="keywords" content="研究报告" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://0xjeffrey.life">
+        <img src="http://0xjeffrey.life/images/avatar.png?v=1682591353839" class="site-logo">
+        <h1 class="site-title">Jeffrey.eth</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://xlk6666.github.io/jeffrey.io/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            文章
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="http://0xjeffrey.life/about" class="site-nav">
+            关于我
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/xlk6666" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/0xJeffrey_Xie" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/xie-liang-ke-53" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      All in Web3 
+记录思维成长
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="http://0xjeffrey.life/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">LSDFI产品设计报告</h2>
+            <div class="post-date">2023-04-24</div>
+            
+              <div class="feature-container" style="background-image: url('http://0xjeffrey.life/post-images/LSD Research.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <center><b><h1>大纲</h1></b></center>
+<h2 id="10需求分析">1.0需求分析</h2>
+<ul>
+<li>1.1 新型LSDFI切入点</li>
+</ul>
+<h2 id="20lsd10设计机制">2.0LSD1.0设计机制</h2>
+<ul>
+<li>2.1Lido设计机制</li>
+<li>2.2Rocketpool设计机制</li>
+<li>2.3Coinbase 设计机制</li>
+</ul>
+<h2 id="30lsdfi20设计机制">3.0LSDFi2.0设计机制</h2>
+<ul>
+<li>3.1 Frax Ether设计机制</li>
+<li>3.2 LybraFinace设计机制</li>
+<li>3.3 Paradllel 设计机制</li>
+<li>3.4 Unsheth 设计机制</li>
+</ul>
+<hr>
+<center><b><h1>1.0 需求分析</h1></b></center>
+<p>都旨在解决以太坊质押的痛点</p>
+<ul>
+<li>第一阶段（LSD）<br>
+<mark>节点搭建难、最低质押数量门槛高、资本效率低等问题</mark></li>
+<li>第二阶段（LSDFI）<br>
+<mark>高质押收益率问题</mark></li>
+</ul>
+<h3 id="11新型lsdfi切入点">1.1新型LSDFI切入点</h3>
+<ul>
+<li>推动LSD资产的采用：EigenLayer、Lybra、Aura；</li>
+<li>产品逻辑简单、门槛低的指数产品：Index Coop、YFI；</li>
+<li>提供更高的资本效率：Pendle、Agility；</li>
+<li>推动LSD质押去中心化：unshETH；</li>
+</ul>
+<h3 id="lsd占有率">LSD占有率</h3>
+<figure data-type="image" tabindex="1"><img src="http://0xjeffrey.life/post-images/1682239176358.png" alt="" loading="lazy"></figure>
+<center><b><h1>2.0LSD1.0设计机制</h1></b></center>
+<h2 id="21-lido设计机制">2.1 Lido设计机制</h2>
+<p>LSD类型的优点：stETH是迄今为止最受欢迎的LSD代币。stETH也被普遍接受为抵押品。</p>
+<p>LSD类型的缺点：在DEX中使用很复杂，因为流动性池中的stETH也必须重新rebase，这就是为什么使用它的封装版本。</p>
+<h2 id="22-rocketpool设计机制">2.2 Rocketpool设计机制</h2>
+<p>rETH是一种带有奖励的代币，即随着奖励的增加，它的基础价值会逐渐增加。与rebase代币不同，这些代币没有频繁变化的弹性供应。</p>
+<p>LSD类型的优点：RPL具有无权限的节点操作，即任何人都可以通过质押16 ETH和1.6 ETH的RPL成为节点运营商。这与Lido不同，后者有一组经过许可的验证器。<br>
+<mark>rETH可以说比stETH更好地维持了与ETH的锚定。</mark></p>
+<figure data-type="image" tabindex="2"><img src="http://0xjeffrey.life/post-images/1682257834384.jpg" alt="" loading="lazy"></figure>
+<h2 id="23-coinbase-设计机制">2.3 Coinbase 设计机制</h2>
+<p>cbETH 是一种标准的 ERC-20 代币，使用 cToken 模型设计——该模型由 Compound Finance 创建，用于在其协议中表示存款资产。</p>
+<p>ETH2 和 cbETH 的持有者将同样受益于以太坊质押奖励。持有 ETH2，您会收到定期的 ETH2 支出。持有 cbETH，您会通过提高 cbETH 转换率获得相同的回报（相同的 cbETH 可以解包更多的 ETH2）。</p>
+<p>由于转换率的原因，cbETH 的价格可能会偏离 ETH，因为 cbETH 代表 1 个质押的 ETH 加上自初始化以来的所有应计质押利息。cbETH 不与 ETH 的价格挂钩，也不存在 1:1 关系的预期</p>
+<p><strong>LSD常见协议对比</strong>👇<br>
+<img src="http://0xjeffrey.life/post-images/1682258003233.jpg" alt="" loading="lazy"></p>
+<center><b><h1>3.0LSDFi2.0设计机制</h1></b></center>
+<h2 id="31-frax-ether设计机制">3.1 Frax Ether设计机制</h2>
+<p><strong>Frax的出现让lsd开启套娃机制defi乐高</strong><br>
+stETH 直接通过 rebase 方式向 stETH 用户发放质押奖动不同的是，frxETH 用户并不能直接获得质押奖励一一如果frxETH 用户要获取以太坊质押收益，则需要将 frXETH 再次质押为 sfrxETH。<br>
+<img src="http://0xjeffrey.life/post-images/1682295075514.png" alt="" loading="lazy"><br>
+FraxETH获得奖励的方式有两种</p>
+<ul>
+<li>第一种 用户质押FraxETH得到FrxETH 质押FraxETH从而瓜分FrxETH奖励池（☂️这里不是所有用户都选择第一种方式因为还可以选择不质押用Curve机制）</li>
+<li>第二种 将 frxETH 存入 Curve 的frxETH/ETH 流动性池，收获 LP收益。</li>
+</ul>
+<p><mark>理论上讲，选择在 Curve 的frxETH/ETH 流动性池(fXETH）和选择二次质押 (sfrxETH)，会因为收益率的差异逐步形成动态的套利平衡，从而将两个不同选择的收益率始终保持在同一区问。基本上两者都接近8%APY</mark></p>
+<h2 id="32-lybrafinace设计机制">3.2 LybraFinace设计机制</h2>
+<p><strong>项目总揽</strong><br>
+<img src="http://0xjeffrey.life/post-images/1682255982270.jpeg" alt="" loading="lazy"><br>
+Lybra 通过抵押生息资产 stETH 来铸造生息稳定币eUSD。Lybra 通过将 stETH 产生的利息 stETH 转化为 eUSD，并分配给 eUSD Holder 和 Lybra Token 质押者。</p>
+<p><strong>机制</strong>：Lybra会将用户存入的ETH存入Lido等LSD协议进行Staking，Staking获得的收益在二级市场上换回eUSD，然后将换回的eUSD分发给eUSD的持有者；目前Staking的年化收益约4.5%，假设平均LTV为200%，则eUSD可获得约9%的年化收益；但这其中Lybra要抽水1.5%。</p>
+<figure data-type="image" tabindex="3"><img src="http://0xjeffrey.life/post-images/1682256618321.jpeg" alt="" loading="lazy"></figure>
+<p><strong>情况一</strong>：当二级市场中1eUSD&lt;1USD时，套利者可以通过刚性兑付模块提供的流动性将1eUSD兑换为价值1USD的ETH资产，通过这一路径维持锚定，这个过程中协议收取0.5%的刚性兑付费用；</p>
+<p><strong>情况二</strong>：当1eUSD&gt;1USD时，Lybra缺乏相应的调节机制。由于eUSD作为生息稳定币本身存在较强的持币动机，且协议需要不断地在二级市场购买eUSD发放利息；所以就目前来看eUSD有可能向上脱锚而失去稳定币的性质，脱锚上限1.5USD；</p>
+<p><strong>清算机制</strong>：当然Lybra用到借贷会涉及到清算机制<br>
+<img src="http://0xjeffrey.life/post-images/1682256741971.jpeg" alt="" loading="lazy"><br>
+引入Liquidator和Keeper，Liquidator锁定eUSD到协议，Keeper监控协议状态，当Lybra中的某一个借款人的抵押率下降到150%以下触发清算时，选择合适的Liquidator，以其锁定的eUSD折价10%清算被清算人的债务；</p>
+<p><strong>经济模型</strong><br>
+<img src="http://0xjeffrey.life/post-images/1682256784867.png" alt="" loading="lazy"></p>
+<p>本质上，Lybra 是通过稳定币 eUSD 来捕获以太坊质押的收益。eUSD 的安全质押率为 150%，APY 为 7.2%。如果在最理想的条件（1.5 美元的 stETH 铸造 1 美元的eUSD）来计算下，eUSD 的利润效率略少于 stETH。但是，eUSD 是流动资产，持有者可以通过 eUSD 在 DeFi 协议中获得更多的利润，从而为 Lybra 协议的质押者提供更高的资本效率<br>
+<mark>总结：Lybra是在帮助以太坊质押参与者提前将未来的利息变现。</mark></p>
+<h2 id="33-paradlle-设计机制">3.3 Paradlle 设计机制</h2>
+<p><strong>项目总揽</strong><br>
+Pendle Finance 是一个建立在以太坊、Arbitrum 和 Avalanche 上的，能够将收益代币化的 DeFi 协议，它允许用户对某些资产的未来收益进行代币化和售出。Pendle 已经支持 Lido Finance、Rocket Pool、Aura Finance 所提供的相关 LSD 资产。<br>
+Pendle 会将生息资产代币包装成 SY（标准化收益代币）在将SY分成</p>
+<ol>
+<li>PT（本金代币）</li>
+<li>YT（收益代币）是在一定时间内的收益</li>
+</ol>
+<p><img src="http://0xjeffrey.life/post-images/1682293349081.png" alt="" loading="lazy"><br>
+当用户把100个DAI存入Pendle之后，</p>
+<ol>
+<li>Pendle会先把DAI存入compound中，变成100个cDAI。</li>
+<li>Pendle会把100个cDAI封装成标准化收益代币sy-cDAI ，随后拆分成100个本金代币PT-cDAI和100个收益代币YT-cDAI</li>
+<li>每一个本金代币PT-cDAI在到期后，都可以兑换一个DAI；每一个YT-cDAI，可以兑换在持有期间的cDAI收益。</li>
+</ol>
+<p><strong>迭代V1、V2</strong></p>
+<ul>
+<li>V1版本中，Pendle部署在了Ethereum和Avalanche上</li>
+<li>V2版本中，现阶段Pendle只部署在Ethereum和Arbitrum上<br>
+<img src="http://0xjeffrey.life/post-images/1682293607831.png" alt="" loading="lazy"></li>
+</ul>
+<p>V2版本中，借鉴了另一个固定收益项目—Notoinal Finance的AMM模型。<br>
+Notional Finance的模型在同等流动性的情况下</p>
+<ol>
+<li>资金效率更高</li>
+<li>用户的无常损失更小<br>
+<img src="http://0xjeffrey.life/post-images/1682293714842.png" alt="" loading="lazy"><br>
+红色的曲线即Notional Finance的模型；<br>
+黑色曲线是Pendle V1版本中的AMM模型；<br>
+蓝色曲线是其他固定收益项目，如Element Finance、Sense Finance的AMM模型</li>
+</ol>
+<p>valanche的TVL不足10亿美元，其原生DeFi中，最高TVL的项目是Benqi，其锁仓量约为2.4亿美元，跟Arbitrum当前接近23亿锁仓量、最大TVL项目—GMX接近6亿美元锁仓量差距明显。</p>
+<hr>
+<p><strong>情况一购买</strong>：用户想买入YT<br>
+<strong>情况二卖出</strong>：用户想要卖出YT<br>
+<img src="http://0xjeffrey.life/post-images/1682294250826.png" alt="" loading="lazy"></p>
+<ol>
+<li>买家将1个SY送入交易合约中，希望购买YT；</li>
+<li>交易合约会从池子中抽取N个SY；</li>
+<li>将N个SY分拆成N个PT和N个YT；</li>
+<li>将N个YT发送给买家；</li>
+<li>PT送回池子。</li>
+</ol>
+<figure data-type="image" tabindex="4"><img src="http://0xjeffrey.life/post-images/1682294266348.png" alt="" loading="lazy"></figure>
+<ol>
+<li>卖家将N个YT送入交易合约中，希望卖出YT；</li>
+<li>合约将从池子中借出N个PT；</li>
+<li>合约将N个YT和N个PT合成为N个SY；</li>
+<li>一部分的SY将换成PT发送至合约，用于偿还步骤（2）借出的PT；</li>
+<li>剩余的SY将发送给卖家。</li>
+</ol>
+<h2 id="34-unsheth-设计机制">3.4 Unsheth 设计机制</h2>
+<p><strong>切入点</strong>：Lido、Frax 的 LSD 都在某种程度上受到<strong>中心化的困扰</strong><br>
+unshETH 是一个通过流动性激励来促进以太坊质押验证去中心化的LSDFi协议。<br>
+unshETH 在 LSDfi 领域开创了两个关键创新：</p>
+<ol>
+<li>
+<p>验证者去中心化挖矿（vdMining）；</p>
+</li>
+<li>
+<p>验证者支配期权（VDOs）<br>
+不同 LSD 随时间变化的 TVL 份额。<br>
+vdMining和VDOs的构建都是在通过不同的模式促进CR（当前比例）不断趋近ODR（最佳去中心化比例）。</p>
+</li>
+</ol>
+<h3 id="vdmining">vdMining</h3>
+<p>vdMining 是一种代币分发机制，奖励用户以符合 unshETH 社区设置的最佳去中心化比例的方式质押其 LSD<br>
+wstETH（Lido）； sfrxETH（Frax）； rETH（Rocketpool）；cbETH（Coinbase）； ETH（原生ETH）<br>
+<img src="http://0xjeffrey.life/post-images/1682263090450.jpg" alt="" loading="lazy"></p>
+<p>通过 unshETH 协议，用户可以存入他们的 ETH / ETH LSD 以换取 unshETH 代币。用户可以进一步质押其 unshETH 代币以获得 $USH 代币。质押 unshETH 使用户能够在锁定的 LSD 上获得高回报，如果他们以某些条件进行质押。<br>
+<img src="http://0xjeffrey.life/post-images/1682263583707.jpg" alt="" loading="lazy"></p>
+<h3 id="验证者支配期权vdos">验证者支配期权（VDOs）</h3>
+<p>非主导 LSD 的代表通过 unshETH DAO 购买 VDOs，该 DAO 预先支付了期权成本。作为交换，unshETH DAO 在 VDO 支付时对收益率有流动性偏好。如果期权到期时没有任何价值，则 DAO 会注销成本。<br>
+非主导 LSD 持有者通过 vdMining 和主导 LSD 持有者的一部分收益获得收益，如果 VDO 在“赚钱”的情况下到期，则可以获得这一部分收益。占主导地位的 LSD 持有者编写的 VDO 越冒险，他们赚取的溢价就越大，但潜在损失也越大。<br>
+<img src="http://0xjeffrey.life/post-images/1682263777483.jpg" alt="" loading="lazy"></p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://0xjeffrey.life/f9njchi4k/" class="tag">
+                    研究报告
+                  </a>
+                
+              </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

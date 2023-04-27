@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>LSD研究报告 | Jeffrey.eth</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://0xjeffrey.life/favicon.ico?v=1682591353839">
+<link rel="stylesheet" href="http://0xjeffrey.life/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="目录：
+1.0 LSD产生，它为什么出现？
+
+1.1以太坊升级历程
+
+2.0 LSD和LSDFI
+
+2.1.1.单独质押（solo home staking）
+2.1.2质押即服务 （Staking as a Service）
+2.1.3中..." />
+    <meta name="keywords" content="研究报告" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://0xjeffrey.life">
+        <img src="http://0xjeffrey.life/images/avatar.png?v=1682591353839" class="site-logo">
+        <h1 class="site-title">Jeffrey.eth</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://xlk6666.github.io/jeffrey.io/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            文章
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="http://0xjeffrey.life/about" class="site-nav">
+            关于我
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/xlk6666" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/0xJeffrey_Xie" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/xie-liang-ke-53" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      All in Web3 
+记录思维成长
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="http://0xjeffrey.life/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">LSD研究报告</h2>
+            <div class="post-date">2023-04-24</div>
+            
+              <div class="feature-container" style="background-image: url('http://0xjeffrey.life/post-images/lsd-yan-jiu-bao-gao.webp')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>目录：</p>
+<h2 id="10-lsd产生它为什么出现">1.0 LSD产生，它为什么出现？</h2>
+<ul>
+<li>1.1以太坊升级历程</li>
+</ul>
+<h2 id="20-lsd和lsdfi">2.0 LSD和LSDFI</h2>
+<ul>
+<li>2.1.1.<strong>单独质押（solo home staking）</strong></li>
+<li>2.1.2<strong>质押即服务 （Staking as a Service）</strong></li>
+<li>2.1.3<strong>中心化交易所 （Centralized Exchanges）</strong></li>
+<li>2.1.4<strong>流动性质押 （Liquid Staking）</strong></li>
+<li>2.2LSD演变</li>
+</ul>
+<h2 id="30风险">3.0风险</h2>
+<h2 id="40写在最后为什么看好">4.0写在最后：为什么看好？</h2>
+<hr>
+<center><b><h1>1.0 LSD产生，它为什么出现？</h1></b></center>
+<p>讲到LSD就不得不讲到以太坊上海升级，那不妨聊聊为啥以太坊的发展历程(就是觉得有趣）。以太坊早期团队将Ethereum的开发划分为了四步战略，代号分别为Frontier（边疆），Homestead（家园），Metropolis（都会）和Serenity（宁静）。</p>
+<h2 id="11以太坊升级历程">1.1以太坊升级历程</h2>
+<p><strong>边疆</strong>是以太坊第一次以准系统级面向开发者展示，2015年7月发布，V神在边疆升级时说：你们就像是在American Frontier美国西部大开发时的淘金者，将面临巨大的机遇，但也会有风险，所以明白为什么叫Frontier了吧，同时确实如V神所说，当时15年进入以太坊的人真的像美国西部大开发的淘金者一样获得巨大回报</p>
+<p><strong>家园Homestead</strong>则是针对于边疆的下一次升级，V神希望去西部的这些淘金者们能够安定下来打造成为自己的家园，主要是让以太坊运营的更加稳定完善，家园升级发布了EIP2、7、8，于2016年3月完成升级</p>
+<p><strong>大都会Metropolis</strong>，大家会好奇为什么一开头说的以太坊里程碑没有Metropolis呢？是因为Metropolis被拆分成了两次升级，拜占庭和君士坦丁堡，叫大都会的名字大家应该也理解了就是将家园打造成大城市。</p>
+<p><strong>最后到宁静Serenity阶段</strong>，顾名思义把以太坊建设成大城市就可以宁静了，在文档中V神原话说到了这个阶段，只剩下最后一件要解决的事：挖矿的工作量证明，他说POW是像民主一样最糟糕的事，极大的浪费了资源，摆脱POW将会让网络更高效，新手更容易进入</p>
+<p>到2022年9月15日，以太坊完成向POS机制转变，以质押成为节点为主要收益获取模式开始了，pow矿工全部暂停。如果想获得pos质押收益，要一次性存入32个以太坊，成为验证者，直到上海升级后才能取出，还要硬件搭建节点，还得24小时不关机，有相当的维护成本。（<a href="https://ethereum.org/zh/staking/">https://ethereum.org/zh/staking/</a>）</p>
+<p>这些缺点也使得LSD（Liquid Staking Derivatives），流动性质押衍生品协议伴随ETH2.0的升级出生。</p>
+<center><b><h1>2.0 LSD和LSDFI</h1></b></center>
+<p>以太坊质押可分为四类；独立验证者（solo home staking）、质押即服务平台（stsaas）、联合质押协议（pool staking）、中心化机制质押服务（centralization）、单独质押 Solo Home Staking</p>
+<h2 id="21质押的四种类型">2.1质押的四种类型</h2>
+<h3 id="211单独质押solo-home-staking">2.1.1.<strong>单独质押（solo home staking）</strong></h3>
+<p>单独质押是保护以太坊的最佳选择，也是以太坊目前所采取的方案。单独质押是指用户自行维护一套硬件设备作为验证节点，并存入至少32ETH进行激活才能参与共识。</p>
+<p><strong>优点</strong>：<br>
+1️⃣用户可以直接从以太坊协议中获得奖励，无中间商赚差价；<br>
+2️⃣用户可以最大程度地控制质押的资金和质押设置，无需担心中间商跑路；<br>
+3️⃣单独质押的用户越多可以增强以太坊协议的稳健性、分散性和安全性。<br>
+<strong>缺点</strong>：<br>
+1️⃣单独质押门槛较高，一是用户必须存入32ETH；<br>
+2️⃣用户必须维护一套硬件设备来运行执行客户端和共识客户端，其中的风险是如果设备下线或作恶会受到ETH削减甚至罚没的惩罚。<br>
+3️⃣承担币价下跌的风险。<br>
+<mark>正因为存在这样的门槛和痛点，提供商们提供了各式质押服务供用户选择。</mark></p>
+<h3 id="212质押即服务-staking-as-a-service">2.1.2<strong>质押即服务 （Staking as a Service）</strong></h3>
+<p>质押即服务是指委托供应商代运行节点。</p>
+<p><strong>优点</strong>：<br>
+1️⃣解决了需要维护硬件设备的门槛。如果用户有足够的资金质押32个ETH但是不熟悉硬件或者不想跟硬件打交道，可以委托提供商代为运行节点。<br>
+2️⃣降低资金成本，只需要支付节点运营费</p>
+<p><strong>缺点</strong>：<br>
+1️⃣使用用户的签名密钥进行验证，面临服务提供商跑路和设备问题导致的的风险。</p>
+<h3 id="213中心化交易所-centralized-exchanges">2.1.3<strong>中心化交易所 （Centralized Exchanges）</strong></h3>
+<p>中心化交易所质押顾名思义将资金交于中心化交易所<br>
+<strong>优点</strong>：<br>
+1️⃣门槛低，用户只需花极少的时间和精力即可通过ETH持仓来赚取收益。</p>
+<p><strong>缺点</strong>：<br>
+1️⃣不知道资金去向，可能存在暗箱行为，信任成本增加。<br>
+2️⃣网络更容易受到攻击或产生漏洞，中心化交易所汇聚了大量的ETH资金池并运行了大量验证节点，对于网络和他的用户来说可能是危险的，因为这相当于创建了一个大型的中心化目标和故障点。<br>
+3️⃣收益率低，中心化交易所颁发的质押凭证多颁发于自己的链上，如BSC，OKC等，导致该凭证的流动性相对较低，且无法进行二次质押。<br>
+4️⃣监管问题，中心化交易所更容易受到国家政策的影响。曾有消息称美国证券交易委员会（SEC）希望在美国取消零售客户的加密资产质押服务，次日Kraken 就宣布终止了美国用户的加密资产质押服务。</p>
+<h3 id="214流动性质押-liquid-staking">2.1.4<strong>流动性质押 （Liquid Staking）</strong></h3>
+<p>流动性质押（Liquid Staking）解决了需要质押32个ETH的门槛和锁仓期资金无流动性的痛点。流动性质押是联合质押（Pooled staking）方案的一种，联合质押相当于以集资的方式筹集32个ETH，以此来满足激活节点的资金门槛。</p>
+<p><strong>优点</strong>：<br>
+1️⃣增加流动性，解决了需要质押32个ETH的门槛和锁仓期资金无流动性的痛点，LSD代币还可以用于转让交易也可以在其他DeFi协议上进行二次投资。<br>
+2️⃣去中心化程度相对较高，节点运营商往往较为分散。<br>
+3️⃣资金成本低，不仅质押资金可以任意选择，还可以将质押凭证进行交易。</p>
+<p><strong>缺点</strong>：<br>
+1️⃣同中心化质押一样，也需要对机构，节点运营商有一定的信任成本。<br>
+如下是对四种质押方式的总结👇<br>
+<img src="http://0xjeffrey.life/post-images/1682316764488.png" alt="" loading="lazy"></p>
+<p>经过上述分析，流动性质押存在以下优势：</p>
+<ol>
+<li><strong>准入门槛低</strong>：即使没有32ETH，联合质押池允许用户和其他质押者合作，有些协议质押可低至0.01ETH。</li>
+<li><strong>快速质押</strong>：在池中质押和赎回就和代币交换一样简单。不需要担心硬件设置和节点维护，只需在奖励中扣除一部分节点的运营费。</li>
+<li><strong>流动性</strong>：大部分质押池会提供流动性代币作为用户在此质押的ETH及其产生的收益的代表。流动性代币可用于二次投资，使质押中的ETH物尽其用。<br>
+<mark>因此，流动性质押超越了中心化交易所等途径，成为当下最受欢迎的质押方式，规模达到36.7%.</mark><br>
+<img src="http://0xjeffrey.life/post-images/1682316884735.png" alt="" loading="lazy"></li>
+</ol>
+<h2 id="22lsd演变">2.2LSD演变</h2>
+<p>以太坊官网的质押就像国债收益，类似fixed income；而LSD就像是保本的浮动性收益产品，本质上是一个寻找无风险收益率+风险杠杆。</p>
+<p>后续随着4.12日以太坊完成上海升级后LSDFI逐渐出来，其模式和DeFI的路程基本一致：先基本的金融玩法借贷、质押、金融杠杠 到后面的追求高收益率。</p>
+<p><strong>新型LSDFI切入点</strong></p>
+<ul>
+<li>推动LSD资产的采用：EigenLayer、Lybra、Aura；</li>
+<li>产品逻辑简单、门槛低的指数产品：Index Coop、YFI；</li>
+<li>提供更高的资本效率：Pendle、Agility；</li>
+<li>推动LSD质押去中心化：unshETH；</li>
+</ul>
+<center><b><h1>3.0风险</h1></b></center>
+<ol>
+<li>
+<p><strong>安全问题</strong>:一是存在一定的脱钩风险，比如steh和eth，质押凭证价格低于原本价格。二是监管风险，之前的Krakan事件为中心化LSD敲响警钟，就是否属于证劵存在质疑</p>
+</li>
+<li>
+<p><strong>系统风险</strong>:lsd赛道对eth生态有很强的依赖性，会收到以太坊生态影响，如果pos信标链发生技术性问题时，LSD项目也会承担风险</p>
+</li>
+<li>
+<p><strong>非系统风险</strong>:可能发生挤兑行为，比如：即时赎回流动性质押代币(比如stETH)，意味着必须维持着一定数量的闲置代币 (比如 ETH)，但是如果市场突然发生震荡，可能会出现”银行挤兑“的情况，导致一些流动性质押协议陷入潜在的流动性困境。</p>
+</li>
+</ol>
+<center><b><h1>4.0写在最后：为什么看好？</h1></b></center>
+<p>1.目前crypto市场缺少新的叙事，如果以稳定币来看，目前处于存量市场，在这种存量资金博弈的情况下，以太坊上海升级之后，整个LSD的体量会不断加剧，产生裙带关系，从而盘活整个加密市场的流动性。</p>
+<figure data-type="image" tabindex="1"><img src="http://0xjeffrey.life/post-images/1682316927173.jpg" alt="" loading="lazy"></figure>
+<p>2.上海升级之后，市面上大概率会出现 restaking 的需求，现在以太坊是 2200 万美金左右的市值，目前pos链质押率普遍在50%以上， 且大概率会出现restaking，就是千亿市值的规模。</p>
+<figure data-type="image" tabindex="2"><img src="http://0xjeffrey.life/post-images/1682316939011.png" alt="" loading="lazy"></figure>
+<p>3.使得以太坊更加去中心化，站在以太坊基金会的角度，会比较支持lsd赛道发展，优化以太坊生态。</p>
+<p>对于lsd各赛道的项目来说，就是分蛋糕的事情，目前是lido，但随着时间发展，可能出现<strong>更有潜力和更有发展空间的项目。</strong></p>
+<p>如果想在lsd获得百倍收益可能很难了，因为LSD 的这一波出现的龙头标已经存在了，这些已经成熟运营很长时间的一些协议角度上，已经不太可能出现百倍币这种状态了。</p>
+<p>百倍币大概率就会发生在它的下游或者它的上游。Lido 的下游就是整个 DVT 技术，它的上游就是各种应用。相信会有其他更多基于lido收益的衍生场景。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="http://0xjeffrey.life/f9njchi4k/" class="tag">
+                    研究报告
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="http://0xjeffrey.life/LSD Research/">
+                  <h3 class="post-title">
+                    LSDFI产品设计报告
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

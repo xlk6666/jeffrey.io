@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>钱包总结 | Jeffrey.eth</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="http://0xjeffrey.life/favicon.ico?v=1682591353839">
+<link rel="stylesheet" href="http://0xjeffrey.life/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="从底层往上层看，从演变往功能看
+最近受女朋友的启示结合钱包的发展史总结一下我认为的钱包从比特币诞生以来的发展
+从底层往上层看
+从底层基础设施的发展是往上层应用看钱包的发展，解析一下从比特币诞生到现在钱包的转变和迭代的方向为什么是这样的
+我把..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="http://0xjeffrey.life">
+        <img src="http://0xjeffrey.life/images/avatar.png?v=1682591353839" class="site-logo">
+        <h1 class="site-title">Jeffrey.eth</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://xlk6666.github.io/jeffrey.io/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            文章
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="http://0xjeffrey.life/about" class="site-nav">
+            关于我
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/xlk6666" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+          <a class="social-link" href="https://twitter.com/0xJeffrey_Xie" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+        
+      
+        
+      
+        
+          <a class="social-link" href="https://www.zhihu.com/people/xie-liang-ke-53" target="_blank">
+            <i class="fab fa-zhihu"></i>
+          </a>
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      All in Web3 
+记录思维成长
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="http://0xjeffrey.life/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">钱包总结</h2>
+            <div class="post-date">2023-04-26</div>
+            
+            <div class="post-content" v-pre>
+              <p>从底层往上层看，从演变往功能看</p>
+<p>最近受女朋友的启示结合钱包的发展史总结一下我认为的钱包从比特币诞生以来的发展</p>
+<p>从底层往上层看</p>
+<p>从底层基础设施的发展是往上层应用看钱包的发展，解析一下从比特币诞生到现在钱包的转变和迭代的方向为什么是这样的</p>
+<p>我把这篇文章归类为宏观的竞品分析</p>
+<p>2022年大学毕业很荣幸能进入到Web3行业，我始终认为Web3行业是Genz时代的机会，</p>
+<ol>
+<li>互联网的诞生利于大家信息的传播 诞生出来的BAT TMD各大互联网巨头</li>
+<li>纵观先是新消费行业随之类似于茶百道、三顿半咖啡、茶颜悦色等等这些用新技术+新营销手段赋能传统行业<br>
+这些行业都太卷了，早已经从高速增长的阶段跨度到用户停滞的阶段了</li>
+</ol>
+<p>而对于现在的Web3 和AI 堪称新时代的两大机会</p>
+<p>拉回来再继续钱包赛道的发展</p>
+<h1 id="目录">目录</h1>
+<ul>
+<li>钱包的基本概念
+<ul>
+<li>地址</li>
+<li>助记词</li>
+<li>公私和私钥</li>
+</ul>
+</li>
+<li>钱包行业发展
+<ul>
+<li>比特币诞生时代的钱包
+<ul>
+<li>功能形态</li>
+</ul>
+</li>
+<li>挖矿时代的钱包
+<ul>
+<li>功能形态</li>
+</ul>
+</li>
+<li>交易所时代的钱包
+<ul>
+<li>功能形态</li>
+</ul>
+</li>
+<li>DeFi summer的钱包
+<ul>
+<li>功能形态</li>
+</ul>
+</li>
+<li>NFT Summer的钱包
+<ul>
+<li>功能形态</li>
+</ul>
+</li>
+<li>Gamefi时代的钱包</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
